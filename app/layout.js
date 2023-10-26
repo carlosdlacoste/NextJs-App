@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
 
@@ -9,7 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='flex justify-center items-center h-screen my-9 py-2'>{children}</body>
+      <body>
+        <Navbar/>
+        <main className='flex justify-center items-center h-screen my-9 py-2'>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
